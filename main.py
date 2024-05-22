@@ -8,7 +8,7 @@ while True:
     x = float(x)
     y = float(y)
 
-    print('Operações disponíveis: \n')
+    print('Escolha a operação desejada: \n')
     print('"+" para somar.')
     print('"-" para subtrair.')
     print('"*" para multiplicar')
@@ -25,13 +25,29 @@ while True:
         case '*':
             print(f'A multiplicação é: {x * y}.')
         case '/':
-            print(f'A divisão é: {x / y}.')
+            print(f'A divisão é: {x / y:.2f}.')
         case '%':
-            print(f'O resto da divisão  é: {x % y}.')
+            print(f'O resto da divisão  é: {x % y:.2f}.')
         case _:
             print('Operação inválida')
             continue
+
+    # Perguntar para o usuário se ele deseja continuar
+
+    continuar = input('Continuar calculando? (s/n) ')
+
+    # Verifica a opção do usuário
     
+    if continuar == "s":
+        continue
+    elif continuar == "n":
+        break
+    else:
+        print('Opção digitada inválida. \nCalculadora reiniciada.')
+        continue
+
+
+
 
 
 
